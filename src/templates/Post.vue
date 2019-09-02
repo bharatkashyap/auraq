@@ -66,9 +66,9 @@ export default {
     metaInfo () {
         return {
             meta: [
-                { property: "og:title", content: this.post.Heading },
-                { property: "og:description", content: this.post.Description },
-                { property: "og:image", content: this.post.Pics[0].url },
+                { property: "og:title", content: this.$page.post.Heading },
+                { property: "og:description", content: this.$page.post.Description },
+                { property: "og:image", content: this.$page.post.Pics[0].url },
                 { property: "twitter:card", content: "summary_large_image"}
             ]
         }
