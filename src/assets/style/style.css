@@ -1,0 +1,237 @@
+/** ====================================== 
+ * HTML Default Styles 
+ */
+
+html {
+    font-size: 16px;
+}
+
+
+/** ====================================== 
+ * MEDIA QUERY Styles 
+ */
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 11.2px;
+    }
+} 
+
+
+/** ====================================== 
+ * UTILITY CLASS Styles 
+ */
+
+.flex-equal {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+a {
+    text-decoration: none!important;
+    color: inherit!important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+kbd {
+    color: #000!important;
+    font-size: 1rem!important;
+    display: inline-block!important;
+    border: 1px solid #ccc!important;
+    border-radius: 4px!important;
+    padding: 0.1em 0.5em!important;
+    margin: 0 0.2em!important;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset!important;
+    background-color: #f7f7f7!important;
+}
+
+.o-0 {
+    opacity: 0;
+}
+
+.o-1 {
+    opacity: 1;
+}
+
+.box-shadow {
+    box-shadow: 1px 1px 5px #21252950
+}
+
+.w-25 {
+    width: 25%!important;
+}
+
+/** ====================================== 
+ * ANIMATION Styles 
+ * FADE IN
+ * FADE IN BORDER
+ */
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+}
+@keyframes fadeInBorder {
+    0% { border-bottom-color: rgba(0,0,0,0); }
+    100% { border-bottom-color: rgba(0,0,0,0.8); }
+}
+
+.post.pre-load {
+    opacity: 0;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes heartbeat {
+    0% { 
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1)
+    }
+}
+.icon-svg.liked {
+    animation-name: heartbeat;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    animation-iteration-count: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s ease-in;
+  }
+
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+/** ====================================== 
+ * FONT Styles 
+ */
+
+.font-heading {
+    font-family: 'Halant', serif;
+}
+
+.font-subheading {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.font-text {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.font-size-small {
+    font-size: 0.9rem;
+}
+
+.font-size-large {
+    font-size: 1.3rem;
+}
+
+.display-5 {
+    font-size: 2rem;
+}
+
+
+/** ====================================== 
+ * SVG ICON Styles 
+ */
+
+.icon-svg {
+    height: 25px;
+    width: 25px;
+    opacity: 0.1;
+    transition: opacity ease-in 0.1s;
+}
+
+.icon-svg-small {
+    height: 18px;
+    width: 18px;
+}
+
+.icon-svg.liked {
+    background: url("~@/assets/img/liked.svg");
+    padding-left: 18px;
+    opacity: 1;
+}
+
+/** ====================================== 
+ * NIGHT MODE Styles 
+ */
+
+.night-mode-button {
+    background: url("~@/assets/img/moon.svg");
+    background-size: contain;
+    background-position: center;
+    position: fixed;
+    top: 30px;
+    left: 10px;
+}
+
+.night-mode-button.day {
+    background: url("~@/assets/img/sun.svg");
+    opacity: 1;
+}
+
+div.wrapper-main.night .icon-svg {
+    filter: brightness(0) invert(1);
+
+}
+
+div.wrapper-main.night .icon-svg.liked {
+    filter: brightness(1) invert(0);
+}
+
+div.wrapper-main.night hr.v-divide-strong, div.wrapper-main.night hr.v-divide{
+    filter: invert(1);
+}
+
+div.wrapper-main.night hr.v-divide-emphasis {
+    filter: invert(0);
+}
+
+div.wrapper-main.night .border {
+    border-color: rgba(56,52,55,0.8)!important;
+}
+
+div.wrapper-main.night #post-image {
+    background-color: rgba(0,0,0,0.25);
+}
+
+div.wrapper-main.night {
+    background-color: #212529;
+    color: #fff;
+    transition: all 0.2s ease-in;
+}
+
+.night #post-writer {
+    filter: invert(1);
+}
+
+#header.night {
+    background-color: #212529cc;
+}
+  
+#header-sticky.night {
+    background-color: #212529;
+}
+
+.night .text-time {
+    filter: invert(1);
+}
+
+
+
