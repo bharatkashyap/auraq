@@ -1,7 +1,7 @@
 <template>
 <layout>
   <div id="posts-container mb-1" class="main-content">
-    <post-card v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
+    <post-card v-for="edge in filteredPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
   </div>
 </layout>
 </template>
@@ -16,6 +16,7 @@ query Post {
         Date,
         Description,
         Blurb, 
+        isHidden,
         Tag {
           Name
         }
@@ -60,6 +61,9 @@ export default {
     Loader
   },
   computed : {
+    filteredPosts() {
+      return this.$page.posts.edges.filter( post => post.node.isHidden == "False" );
+    },
     visibilityObserver() {
       return {    
           callback: this.visibilityChanged,
