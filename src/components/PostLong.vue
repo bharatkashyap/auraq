@@ -215,8 +215,8 @@ hr.v-divide-emphasis {
 
 #post-text figure img {
     max-height: 450px;
-    /* max-width: 85vw; */
-    max-width: 600px;
+    max-width: 70vw;
+    /* max-width: 600px; */
     object-fit: contain; 
     display: flex;
     margin: 1rem auto;
