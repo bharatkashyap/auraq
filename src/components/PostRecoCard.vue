@@ -6,7 +6,7 @@
                 <img v-if="post.Pics.length" :src="post.Pics[0].url" class="mt-3 post-reco-banner-image" />
             </div>
 
-            <div id="post-stub" @click="navigateToPost" @mouseover="hoverOverPost" @mouseout="leavePost" class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start cursor-pointer">
+            <div id="post-stub" @click="navigateToPost" class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start cursor-pointer">
                 <div id="post-meta" class="mt-1 d-flex flex-row">
                     <div id="post-tag" class="mt-1 align-items-start align-self-center font-size-small mr-3 text-uppercase">{{post.Tag[0].Name}}</div>
                     <div id="post-date" class="mt-1 ml-3 align-items-start font-size-small">{{sanitiseDate(post.Date)}}</div>
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-5" :class="{'w-25': !overPost, 'w-75': overPost, 'v-divide-emphasis': overPost}"/>
+    <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-5 w-25" />
 </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
 <layout>
     <div>
-        <span class="mt-2 d-flex justify-content-center font-subheading font-weight-light font-size-large mt-3"> Posts by <span class="ml-1 post-invite">"{{ $page.writer.Name }}"</span></span>
+        <span class="mt-2 d-flex justify-content-center font-subheading font-weight-light font-size-large mt-3"> Posts by <span class="ml-1 post-invite">{{ $page.writer.Name }}</span></span>
         <post-card v-for="edge in $page.writer.belongsTo.edges" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
     </div>
 </layout>

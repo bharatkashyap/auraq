@@ -208,4 +208,25 @@ hr.v-divide-emphasis {
     object-fit: contain; 
 }
 
+/** ======================================
+* IMAGE BANNER Styles
+*/
+
+
+#post-text figure img {
+    max-height: 450px;
+    /* max-width: 85vw; */
+    max-width: 600px;
+    object-fit: contain; 
+    display: flex;
+    margin: 1rem auto;
+}
+
+#post-text figcaption {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.1rem;
+}
+
 </style>

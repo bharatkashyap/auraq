@@ -20,6 +20,7 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   Vue.use(VueObserveVisibility);
   
   head.title = "Auraq";
+  head.titleTemplate = "";
 
   head.link.push({
     rel: 'stylesheet',
