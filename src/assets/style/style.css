@@ -6,6 +6,15 @@ html {
     font-size: 16px;
 }
 
+/** ====================================== 
+ * MAIN Wrapper Styles
+ */
+
+ .wrapper-main {
+    height: 100vh;
+}
+
+
 
 /** ====================================== 
  * MEDIA QUERY Styles 
