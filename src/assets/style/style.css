@@ -150,6 +150,10 @@ kbd {
     font-size: 1.3rem;
 }
 
+.font-size-huge {
+    font-size: 2rem;
+}
+
 .display-5 {
     font-size: 2rem;
 }

@@ -1,3 +1,5 @@
+import  { fetch as gridFetch } from 'gridsome';
+
 export default {
   state: {
     viewport: {
@@ -22,10 +24,10 @@ export default {
       tagsEndpoint: "/tags",
       likeEndpoint: "/like",
       userEndpoint: "/user",
-      clientId: {
-        development: "644512823764-q3l96alj347brga5ss81heht2bb5m08d",
-        production: "644512823764-2ikb6g25rni6f9v5vlprhqh5nonn6grl",
-      },
+      // clientId: {
+      //   development: "644512823764-q3l96alj347brga5ss81heht2bb5m08d",
+      //   production: "644512823764-2ikb6g25rni6f9v5vlprhqh5nonn6grl",
+      // },
       googleVerifyUserEndpoint: "https://oauth2.googleapis.com/tokeninfo?id_token="
     },
     fetchedPosts: [],
@@ -119,6 +121,9 @@ export default {
     mutateIdToken(state, payload) {
       state.idToken = payload;
     },
+    mutateGraphFetchedUser(state, payload) {
+      state.fetchedUser = payload;
+    },
     mutateFetchedUser(state, payload) {
       state.fetchedUser = payload;
     },
@@ -193,8 +198,9 @@ export default {
 
 
     async initAuth2({ commit, state, dispatch }, gapiAuth2) {
+      let googleClientId = process.env.NODE_ENV === state.config.env.dev ? process.env.GRIDSOME_GOOGLE_DEV_CLIENT_ID : process.env.GOOGLE_PROD_CLIENT_ID;
       let gapiAuth2Params = {
-        client_id: `${state.config.clientId[process.env.NODE_ENV]}.apps.googleusercontent.com`,
+        client_id: `${googleClientId}.apps.googleusercontent.com`,
       }
       let googleAuth = await gapiAuth2.init(gapiAuth2Params);
       commit('mutateGoogleAuth', googleAuth);
@@ -233,8 +239,22 @@ export default {
         .then(res => {
           commit('mutateVerifiedGoogleUser', res);
           commit('mutateVerifiedGoogleUserStatus', true);
-          dispatch('fetchUser', res);
+          dispatch('graphFetchUser');
+          //dispatch('fetchUser', res);
       })
+    },
+
+    async graphFetchUser({ state, commit}) {
+      let slug = state.verifiedGoogleUser.email.replace(/\./g, '');
+      try {
+        const results = await gridFetch(`/user/${slug}`)
+        const data = results.data;
+        const user = data.user;
+        commit('mutateGraphFetchedUser', user);
+        commit('mutateFetchedUserStatus', true);
+      } catch(error) {
+        console.log(error)
+      }
     },
 
     fetchUser({ state, dispatch }, verifiedGoogleUser) {

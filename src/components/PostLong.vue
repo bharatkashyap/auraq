@@ -23,7 +23,7 @@
 
     <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-2" />
     <div v-if="post.Writer[0].belongsTo.edges.length" class="d-flex flex-column justify-content-center mt-3 font-weight-light font-size-large">
-         <span class="d-flex align-self-center font-text font-size-large">More by <span class="ml-1 border border-left-0 border-right-0 border-top-0 post-invite"><g-link :to="`/author/${post.Writer[0].Name.replace(' ','-').toLowerCase()}`">this writer</g-link></span></span>
+         <span class="d-flex align-self-center font-text font-size-huge mt-3">More by <span class="ml-2 border border-left-0 border-right-0 border-top-0 post-invite"><g-link :to="`/author/${post.Writer[0].Name.replace(' ','-').toLowerCase()}`">this writer</g-link></span></span>
          <post-reco-card v-for="(edge, index) in post.Writer[0].belongsTo.edges" :key="index" :post="edge.node" v-observe-visibility="visibilityObserver"></post-reco-card>
     </div>
 </div>
@@ -225,7 +225,7 @@ hr.v-divide-emphasis {
 #post-text figcaption {
     text-align: center;
     font-style: italic;
-    font-size: 0.9rem;
+    ost: 0.9rem;
     margin-top: 0.1rem;
 }
 

@@ -38,7 +38,7 @@ query Post {
 </page-query>
 
 <script>
-//import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import PostCard from "~/components/PostCard.vue";
 import Loader from "~/components/Loader.vue";
 
@@ -46,12 +46,13 @@ export default {
 
   data: () => {
     return {
-      fetchedComments: [],
-      fetchedCommentsStatus: false,
-      computedComments: [],
-      postComments: [],
+      // fetchedComments: [],
+      // fetchedCommentsStatus: false,
+      // computedComments: [],
+      // postComments: [],
       localLikedPosts: [],
-      isStub: true
+      // isStub: true
+      gapiAuth2Loaded: false
     }
   },
   components: {
@@ -66,16 +67,18 @@ export default {
           once: true
         }
     },
-    // ...mapState([
+    ...mapState([
+      //'verifiedGoogleUserStatus',
+      //'verifiedGoogleUser'
     //   'config',
     //   'viewport',
     //   'fetchedPosts',
     //   'fetchedPostsStatus',
     //   'fetchedTagsStatus',
     //   'computedPosts',
-    //   'fetchedUser',
+      'fetchedUser',
     //   'likedPosts'
-    // ])
+    ])
   },
   methods: {
     fadeElementIn(id) {
@@ -93,14 +96,25 @@ export default {
       else { this.localLikedPosts = this.likedPosts.filter(p => p !== id); }
       this.likePost( { posts: this.localLikedPosts, id: id});
     },
-    // ...mapActions([
-    //   'fetchPosts',
-    //   'likePost'
-    // ])
+    ...mapActions([
+      'loadGapiAuth2'
+    ])
   },
  
   mounted() {
     window.scrollTo(0,0);
+
+    window.initGapi = () => {
+      if(this.gapiAuth2Loaded == false) {
+        this.loadGapiAuth2();
+        this.gapiAuth2Loaded = true;
+      }
+    }
+    // If script is not loaded afresh (cached), nitGapi is not fired. 
+    if(window.gapi && this.gapiAuth2Loaded == false) {
+      this.loadGapiAuth2();
+      this.gapiAuth2Loaded = true;
+    }
     //if(!this.fetchedPostsStatus) this.fetchPosts();
     /* fetch(`https://api.airtable.com/v0/appvFZdnU9Q1R8Nao/Comments`, {
             method: "GET",

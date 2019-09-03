@@ -21,6 +21,10 @@ module.exports = function (api, opts) {
             route: '/tag/:slug'
         })
 
+        const users = store.addContentType({
+            typeName: 'User'
+        })
+
         const writers = store.addContentType({
             typeName: 'Writer',
             route: '/author/:slug'
@@ -67,6 +71,19 @@ module.exports = function (api, opts) {
                 writers.addNode({
                     id: item.id,
                     slug: item.fields.Name,
+                    fields: item.fields
+                });
+            });
+            fetchNextPage();
+        });
+
+        await base(airtableConfig.users).select().eachPage((records, fetchNextPage) => {
+            records.forEach((record) => {
+                const item = record._rawJson;
+                
+                users.addNode({
+                    id: item.id,
+                    path: `user/${item.fields.email.replace(/\./g, '')}`,
                     fields: item.fields
                 });
             });

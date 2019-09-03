@@ -22,6 +22,11 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   head.title = "Auraq";
   head.titleTemplate = "";
 
+  // head.script.push({
+  //   src: 'https://apis.google.com/js/platform.js?onload=initGapi',
+  //   body: true
+  // })
+
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Catamaran:100,400|Halant&display=swap'
