@@ -2,7 +2,7 @@
 <layout>
     <div>
         <span class="mt-2 d-flex justify-content-center font-subheading font-weight-light font-size-large mt-3"> Posts tagged <span class="ml-1 post-invite">{{ $page.tag.Name }}</span></span>
-        <post-card v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
+        <post-card v-for="edge in filteredPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
     </div>
 </layout>
 </template>
@@ -26,6 +26,7 @@ query Tag($id: String!) {
             Writer {
                 Name
             },
+            isHidden,
             Reading_Time,
             Pics {
         	    url,
@@ -53,6 +54,9 @@ export default {
         PostCard
     },
     computed: {
+        filteredPosts() {
+            return this.$page.tag.belongsTo.edges.filter( post => post.node.isHidden == "False" );
+        },
         visibilityObserver() {
             return {    
                 callback: this.visibilityChanged,

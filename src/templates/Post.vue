@@ -28,6 +28,7 @@ query Post($id: String!) {
                         id,
                         Heading,
                         Date,
+                        isHidden,
                         Reading_Time
                         Pics {
                             url
