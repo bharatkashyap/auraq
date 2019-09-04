@@ -24,12 +24,14 @@ html {
     html {
         font-size: 11.2px;
     }
-
-    .flex-equal {
-        flex-grow: unset!important;
-        flex-basis: unset!important;
-    }
 } 
+
+@media screen and (max-width: 960px) {
+    .flex-equal {
+        flex-basis: unset!important;
+        flex-grow: unset!important;
+    }
+}
 
 
 /** ====================================== 
