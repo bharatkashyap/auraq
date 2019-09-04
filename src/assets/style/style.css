@@ -24,6 +24,11 @@ html {
     html {
         font-size: 11.2px;
     }
+
+    .flex-equal {
+        flex-grow: unset!important;
+        flex-basis: unset!important;
+    }
 } 
 
 

@@ -31,5 +31,6 @@ export default function (Vue, { router, head, isClient, appOptions }) {
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Catamaran:100,400|Halant&display=swap'
   })
+
 }
 
