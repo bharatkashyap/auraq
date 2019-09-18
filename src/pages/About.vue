@@ -1,7 +1,6 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <p id="about-info" class="d-flex justify-content-center mt-2">This is an attempt to build a community-sourced magazine about life, culture and cities. If you want to write, please <a class="generic-link mx-1" href="https://bharatkashyap.github.io" target="_blank">reach out</a> to us!</p>
   </Layout>
 </template>
 
@@ -12,3 +11,7 @@ export default {
   }
 }
 </script>
+
+<style lang="css">
+
+</style>

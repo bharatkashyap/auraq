@@ -24,7 +24,7 @@
     <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-2" />
     <div v-if="filteredPosts.length" class="d-flex flex-column justify-content-center mt-3 font-weight-light font-size-large">
          <span class="d-flex align-self-center font-text font-size-huge mt-3">More by <span class="ml-2 border border-left-0 border-right-0 border-top-0 post-invite"><g-link :to="`/author/${post.Writer[0].Name.replace(' ','-').toLowerCase()}`">this writer</g-link></span></span>
-         <post-reco-card v-for="(edge, index) in filteredPosts.edges" :key="index" :post="edge.node" v-observe-visibility="visibilityObserver"></post-reco-card>
+         <post-reco-card v-for="(edge, index) in filteredPosts" :key="index" :post="edge.node" v-observe-visibility="visibilityObserver"></post-reco-card>
     </div>
 </div>
 </template>
@@ -228,7 +228,7 @@ hr.v-divide-emphasis {
 #post-text figcaption {
     text-align: center;
     font-style: italic;
-    ost: 0.9rem;
+    font-size: 0.9rem;
     margin-top: 0.1rem;
 }
 

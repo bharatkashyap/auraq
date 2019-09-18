@@ -80,6 +80,19 @@ kbd {
     width: 25%!important;
 }
 
+.generic-link {
+    border: 1px solid #21252960;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-style: dashed;
+    transition: all ease-in-out 0.1s;
+}
+
+.generic-link:hover {
+    border-color:  #21252990;
+}
+
 /** ====================================== 
  * ANIMATION Styles 
  * FADE IN
