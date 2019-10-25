@@ -6,6 +6,10 @@
 
 module.exports = {
   siteName: 'Gridsome',
+  icons: {
+    favicon: '~/src/favicon.png',
+    touchicon: '~/src/apple-touch-icon.png'
+  },
   plugins: [
     {
     use: '~/src/sources/badarpur',
