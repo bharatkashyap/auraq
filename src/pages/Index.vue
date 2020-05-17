@@ -1,7 +1,7 @@
 <template>
 <layout>
   <div id="posts-container mb-1" class="main-content">
-    <post-card v-for="edge in filteredPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
+    <post-card v-for="edge in orderedPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
   </div>
 </layout>
 </template>
@@ -63,6 +63,9 @@ export default {
   computed : {
     filteredPosts() {
       return this.$page.posts.edges.filter( post => post.node.isHidden == "False" );
+    },
+    orderedPosts() {
+      return this.filteredPosts.sort( (a, b) => new Date(b.node.Date) - new Date(a.node.Date) );
     },
     visibilityObserver() {
       return {    
