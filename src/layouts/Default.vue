@@ -7,10 +7,11 @@
         <transition name="fade" appear>
           <main>  
             <slot />
+            <Return-Home v-if="!root"/>
           </main>
         </transition>
-        <!-- <Loader v-else></Loader> -->
-        <Return-Home v-if="!root"/>
+        <Footer />
+        <!-- <Loader v-else></Loader> -->        
       </div>
     </div>
   </div>
@@ -21,6 +22,7 @@
 <script>
 import { mapState, mapActions, mapMutations } from 'vuex';
 import Header from '~/components/Header.vue'
+import Footer from '~/components/Footer.vue'
 import ReturnHome from '~/components/ReturnHome.vue'
 
 export default {
@@ -33,6 +35,7 @@ export default {
   },
   components: {
     Header,
+    Footer,
     ReturnHome
   },
   computed: {

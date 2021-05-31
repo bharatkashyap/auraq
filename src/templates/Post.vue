@@ -26,7 +26,7 @@ query Post($id: String!) {
                 node {
                     ... on Post {
                         id,
-                        Heading,
+                        Heading,                        
                         Date,
                         isHidden,
                         Reading_Time

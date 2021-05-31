@@ -7,6 +7,7 @@ const airtableConfig = {
     tags: "Tags",
     writers: "Writers"
 }
+
     
 module.exports = function (api, opts) {
     const base = new airtable({apiKey: opts.apiKey}).base(opts.base);

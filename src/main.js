@@ -28,8 +28,8 @@ export default function (Vue, { router, head, isClient, appOptions }) {
   // })
 
   head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Catamaran:100,400|Halant&display=swap'
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=DM+Serif+Text&family=Libre+Caslon+Text&display=swap"     
   })
 
 }

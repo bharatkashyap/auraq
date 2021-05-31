@@ -16,7 +16,7 @@
          <div v-if="!isStub" id="post-image-slider-wrap" class="d-flex flex-row justify-content-center">
             <div v-for="(pic, index) in pics" class="slider-dot cursor-pointer" @click="postImageScrollIntoView(pic.id)" :class="{selectedDot: isImageSelected(index)}" :key="index"></div>
         </div>
-        <div v-if="!isStub" class="d-none d-lg-flex justify-content-center"><span><kbd>&larr;</kbd><kbd>&rarr;</kbd> <span class="text-monospace align-bottom text-muted">to navigate</span></span></div>
+        <!-- <div v-if="!isStub" class="d-none d-lg-flex justify-content-center"><span><kbd>&larr;</kbd><kbd>&rarr;</kbd> <span class="text-monospace align-bottom text-muted">to navigate</span></span></div> -->
     </div>
 </template>
 

@@ -2,17 +2,18 @@
 <div class="post flex-column" :id="post.id">
     <div class="flex-column my-3 w-100 justify-content-between fadeIn">
         <div class="d-flex flex-lg-row flex-column-reverse align-items-center flex-equal">
-            <div id="post-stub" class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start align-items-lg-center">
-                <div id="post-meta" class="mt-1 d-flex flex-row">
-                    <div id="post-tag" class="mt-1 align-items-start align-self-center font-size-number mr-3 text-uppercase"><span class="post-invite border border-left-0 border-right-0 border-top-0"><g-link :to="`/tag/${post.Tag[0].Name.toLowerCase()}`">{{post.Tag[0].Name}}</g-link></span></div>
-                    <div id="post-date" class="mt-1 ml-3 align-items-start font-size-sm">{{sanitiseDate(post.Date)}}</div>
+            <div id="post-stub-long" class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start align-items-lg-center">
+                <div id="post-meta" class="mt-2 d-flex flex-row">
+                    <div id="post-tag" class="mt-2 align-items-start align-self-center mr-3 text-uppercase">
+                        <span class="post-invite border border-left-0 border-right-0 border-top-0"><g-link :to="`/tag/${post.Tag[0].Name.toLowerCase()}`">{{post.Tag[0].Name}}</g-link></span></div>
+                    <div id="post-writer" class="text-writer mt-2">
+                        <span class="post-invite border border-left-0 border-right-0 border-top-0" v-for="(writer, index) in authors" :key="index"><g-link :to="`/author/${writer.replace(' ','-').toLowerCase()}`">{{writer}}</g-link></span>
+                    </div>                   
                 </div>
-                <div id="post-heading" class="mt-1 align-items-start text-center text-lg-left display-4">{{post.Heading}}</div>
-                <div id="post-sub-head" class="mt-1 text-secondary" v-html="post.Description"></div>
-                <div id="post-reading-time" class="text-time mt-1">{{post.Reading_Time}} min read</div>
-                <div id="post-writer" class="text-writer mt-2">
-                    <span class="post-invite border border-left-0 border-right-0 border-top-0" v-for="(writer, index) in authors" :key="index"><g-link :to="`/author/${writer.replace(' ','-').toLowerCase()}`">{{writer}}</g-link></span>
-                </div>
+                <div id="post-heading" class="mt-2 align-items-start text-center text-lg-left display-4">{{post.Heading}}</div>
+                <div id="post-sub-head" class="mt-2 text-center mx-1 text-secondary" v-html="post.Description"></div>
+                <div id="post-reading-time" class="text-time mt-2">{{post.Reading_Time}} min read</div>
+                <div id="post-date-long" class="mt-1 ml-3 align-items-start font-size-sm">{{sanitiseDate(post.Date)}}</div>                
                 <hr class="v-divide w-75 mb-0 p-2" />
                 <div id="post-text" class="w-75 mt-3 text-justify" v-html="post.Notes"></div>
             </div>   
@@ -20,10 +21,9 @@
         <image-gallery v-if="post.Pics.length" :pics="post.Pics"></image-gallery>
         <!-- <post-actions  :comments="post.Comments" :likes="post.Likes" :post="post.id" @toggle-like="toggleLike" :liked="post.Liked" @submit-comment="submitComment"></post-actions> -->
     </div>
-
-    <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-2" />
-    <div v-if="filteredPosts.length" class="d-flex flex-column justify-content-center mt-3 font-weight-light font-size-large">
-         <span class="d-flex align-self-center font-text font-size-huge mt-3">More by <span class="ml-2 border border-left-0 border-right-0 border-top-0 post-invite"><g-link :to="`/author/${post.Writer[0].Name.replace(' ','-').toLowerCase()}`">this writer</g-link></span></span>
+    <hr class="v-divide w-75 mb-0 p-2" />
+    <div v-if="filteredPosts.length" class="text-center font-text font-size-huge mt-3">More by <span class="ml-2 border border-left-0 border-right-0 border-top-0 post-invite"><g-link :to="`/author/${post.Writer[0].Name.replace(' ','-').toLowerCase()}`">this writer</g-link></span></div>
+    <div id="more" v-if="filteredPosts.length" class="mt-3 font-weight-light font-size-large">         
          <post-reco-card v-for="(edge, index) in filteredPosts" :key="index" :post="edge.node" v-observe-visibility="visibilityObserver"></post-reco-card>
     </div>
 </div>
@@ -106,6 +106,12 @@ export default {
  * HEADING TYPOGRAPHY Styles 
  */
 
+#post-heading {
+    font-family: 'Playfair Display';
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
 #heading-text {
     width: fit-content;
 }
@@ -118,13 +124,14 @@ export default {
     /*text-transform: capitalize; */
 }
 
-#post-heading, #post-date {
-    font-family: 'Catamaran', sans-serif;
+#post-date-long {
+    font-family: 'DM Sans', sans-serif;
+    color: #949494;
     /* font-weight: 500; */
 }
 
 #post-sub-head {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.02cm;
 }
@@ -137,13 +144,17 @@ export default {
     opacity: 0.75;
  } 
 
+  #post-tag {
+     font-size: 12px;
+ }
+
  #post-tag:after {
      content: "//";
      position: relative;
      top: 0;
      bottom: 0;
      right: 0;
-     left: 12px;
+     left: 8px;
  }
 
 /** ====================================== 
@@ -151,13 +162,13 @@ export default {
  */
 
 #post-text {
-    font-family: 'Halant', serif;
-    font-size: 1.5rem;
+    font-family: 'Libre Caslon Text', serif;
+    font-size: 1.2rem;
     /* line-height: 2rem; */
 }
 
 .post-invite {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: #FF416C;
     cursor: pointer;
     transition: all ease-in-out 0.1s;
@@ -167,13 +178,13 @@ export default {
 }
 
 .text-time {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
-    color: #333;
+    color: #676767;
 }
 
 .text-writer {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -232,4 +243,19 @@ hr.v-divide-emphasis {
     margin-top: 0.1rem;
 }
 
+/** ======================================
+* MORE Styles
+*/
+
+#more {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+    #more {
+        grid-template-columns: 1fr;
+    }
+    
+}
 </style>

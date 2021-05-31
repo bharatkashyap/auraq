@@ -6,14 +6,28 @@ html {
     font-size: 16px;
 }
 
+body {
+    text-rendering: optimizeLegibility;
+}
+
+main {
+    background-color: #f5f5f5d6;
+    transition: all 0.1s ease-in;
+}
+
 /** ====================================== 
  * MAIN Wrapper Styles
  */
 
  .wrapper-main {
-    min-height: 100vh;
+    min-height: 100vh;    
 }
 
+.grid-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10vh;
+}
 
 
 /** ====================================== 
@@ -23,6 +37,14 @@ html {
 @media screen and (max-width: 768px) {
     html {
         font-size: 11.2px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .night-mode-button {
+        right: 15px!important;        
     }
 } 
 
@@ -80,6 +102,10 @@ kbd {
     width: 25%!important;
 }
 
+.w-45 {
+    width: 45%!important;
+}
+
 .generic-link {
     border: 1px solid #21252960;
     border-left: 0;
@@ -91,6 +117,17 @@ kbd {
 
 .generic-link:hover {
     border-color:  #21252990;
+}
+
+.underline {
+    text-decoration: underline;    
+    text-decoration-style: dotted;
+    text-decoration-thickness: 2px;    
+    text-underline-offset: 3px;    
+}
+
+.upper-case {
+    text-transform: uppercase;
 }
 
 /** ====================================== 
@@ -151,15 +188,15 @@ kbd {
  */
 
 .font-heading {
-    font-family: 'Halant', serif;
+    font-family: 'DM Serif Display', serif;
 }
 
 .font-subheading {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .font-text {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .font-size-small {
@@ -201,9 +238,27 @@ kbd {
     opacity: 1;
 }
 
+.arrow {
+    background: url("~@/assets/img/arrow.svg");
+    background-color: #F2F2F2;    
+    opacity: 0.8;
+    background-repeat: no-repeat;  
+    transition: all 0.2s ease-in; 
+    background-size: 60%;
+    background-position: center; 
+}
+
+.arrow:hover {  
+    opacity: 0.5;  
+}
+
 /** ====================================== 
  * NIGHT MODE Styles 
  */
+
+.night main {
+    background-color: #1e1d21d6;
+}
 
 .night-mode-button {
     background: url("~@/assets/img/moon.svg");
@@ -211,7 +266,8 @@ kbd {
     background-position: center;
     position: fixed;
     top: 30px;
-    left: 10px;
+    right: 60px;
+    opacity: 0.75;
 }
 
 .night-mode-button.day {

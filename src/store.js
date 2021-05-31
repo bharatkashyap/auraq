@@ -23,11 +23,8 @@ export default {
       commentEndpoint: "/comment",
       tagsEndpoint: "/tags",
       likeEndpoint: "/like",
-      userEndpoint: "/user",
-      // clientId: {
-      //   development: "644512823764-q3l96alj347brga5ss81heht2bb5m08d",
-      //   production: "644512823764-2ikb6g25rni6f9v5vlprhqh5nonn6grl",
-      // },
+      userEndpoint: "/user",      
+      subscribeEndpoint: "/subscribe",
       googleVerifyUserEndpoint: "https://oauth2.googleapis.com/tokeninfo?id_token="
     },
     fetchedPosts: [],
@@ -47,7 +44,10 @@ export default {
     fetchedUserStatus: false,
     foundNoGoogleUser: false,
     postedCommentPending: false,
-    postedCommentSuccess: false
+    postedCommentSuccess: false,
+    subscriberEmail: null,
+    subscriptionStatus: false,
+    subscrptionStatusPending: false
   },
 
   mutations: {
@@ -138,9 +138,37 @@ export default {
     },
     mutatePostedCommentPending(state, payload) {
       state.postedCommentPending = payload;
-    }
+    },
+    mutateSubscriberEmail(state, payload) {
+      state.subscriberEmail = payload;
+    },
+    mutateSubscriptionStatus(state, payload) {
+      state.subscriptionStatus = payload;
+    },
+    mutateSubscriptionStatusPending(state, payload) {
+      state.subscriptionStatusPending = payload;
+    },
   },
   actions: {
+    addSubscriber({ commit, state }) {
+      commit('mutateSubscriptionStatusPending', true);
+      let backendEnvironment = process.env.NODE_ENV;
+    
+      let bearerToken = backendEnvironment === state.config.env.prod ? process.env.API_BEARER_TOKEN : process.env.GRIDSOME_DEV_BEARER_TOKEN;
+      console.log(state.subscriberEmail);
+      fetch(`${state.config.backendAPI[backendEnvironment]}${state.config.subscribeEndpoint}`, {
+        method: "POST",
+        headers: {       
+          'Content-Type': `application/json`,   
+          'Authorization': `Bearer ${bearerToken}`
+        },
+        body: JSON.stringify({ email : state.subscriberEmail })
+      }).then(response => { return response.text() })
+      .then(res => {
+        commit('mutateSubscriptionStatus', true);
+        commit('mutateSubscriptionStatusPending', false);
+      })
+    },
     fetchPosts({ commit, state, dispatch }) {
       dispatch('fetchTags');
       let backendEnvironment = process.env.NODE_ENV;

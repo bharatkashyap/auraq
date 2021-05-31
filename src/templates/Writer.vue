@@ -1,7 +1,7 @@
 <template>
 <layout>
-    <div>
-        <span class="mt-2 d-flex justify-content-center font-subheading font-weight-light font-size-large mt-3"> Posts by <span class="ml-1 post-invite">{{ $page.writer.Name }}</span></span>
+    <div class="grid-container-page">
+        <span class="mt-2 full-width-grid text-center font-subheading font-weight-light font-size-large mt-3"> Posts by <span class="ml-1 post-invite">{{ $page.writer.Name }}</span></span>
         <post-card v-for="edge in filteredPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
     </div>
 </layout>
@@ -54,8 +54,7 @@ export default {
         PostCard
     },
     computed: {
-        filteredPosts() {
-            debugger;
+        filteredPosts() {            
             return this.$page.writer.belongsTo.edges.filter( post => post.node.isHidden == "False" );
         },
         visibilityObserver() {
@@ -78,3 +77,29 @@ export default {
     }
 }
 </script>
+
+<style>
+
+.grid-container-page {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+.full-width-grid {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.full-width-grid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+  
+}
+</style>

@@ -1,23 +1,17 @@
 <template>
-<div class="post pre-load flex-column" :id="`reco${post.id}`">
-    <div class="flex-column my-3 w-100 justify-content-between fadeIn">
-        <div class="d-flex flex-lg-row flex-column align-items-center flex-equal">
-            <div @click="navigateToPost" class="d-flex flex-equal justify-content-center align-self-lg-start cursor-pointer">
-                <img v-if="post.Pics.length" :src="post.Pics[0].url" class="mt-3 post-reco-banner-image" />
-            </div>
-
-            <div id="post-stub" @click="navigateToPost" class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start cursor-pointer">
-                <div id="post-meta" class="mt-1 d-flex flex-row">
-                    <div id="post-tag" class="mt-1 align-items-start align-self-center font-size-small mr-3 text-uppercase">{{post.Tag[0].Name}}</div>
-                    <div id="post-date" class="mt-1 ml-3 align-items-start font-size-small">{{sanitiseDate(post.Date)}}</div>
-                </div>
-                <div id="post-heading" class="mt-1 align-items-start text-center text-lg-left display-5">{{post.Heading}}</div>
-                <div id="post-reading-time" class="text-time mt-1">{{post.Reading_Time}} min read</div>
-            </div>        
-        </div>
+<div class="post d-flex flex-column align-items-center" :id="`reco${post.id}`">        
+    <div @click="navigateToPost" class="justify-content-center cursor-pointer">
+        <img v-if="post.Pics.length" :src="post.Pics[0].url" class="mt-3 post-reco-banner-image" />
     </div>
 
-    <hr class="v-divide mt-2 mb-0 v-divide-double v-divide-strong pb-5 w-25" />
+    <div id="post-stub" @click="navigateToPost" class="align-items-center cursor-pointer">
+        <div id="post-meta" class="mt-1 d-flex flex-row justify-content-center">
+            <div id="post-tag" class="mt-1 align-self-center font-size-small text-uppercase">{{post.Tag[0].Name}}</div>
+            <div id="post-date-long" class="mt-1 ml-3 font-size-small">{{sanitiseDate(post.Date)}}</div>
+        </div>
+        <div id="post-heading-reco" class="mt-1 align-items-center text-center display-5">{{post.Heading}}</div>
+        <div id="post-reading-time" class="text-center text-time mt-1">{{post.Reading_Time}} min read</div>
+    </div>            
 </div>
 </template>
 
@@ -115,13 +109,13 @@ export default {
     /*text-transform: capitalize; */
 }
 
-#post-heading, #post-date {
-    font-family: 'Catamaran', sans-serif;
+#post-heading-reco, #post-date {
+    font-family: 'DM Sans', sans-serif;
     /* font-weight: 500; */
 }
 
 #post-sub-head {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.02cm;
 }
@@ -134,27 +128,37 @@ export default {
     opacity: 0.75;
  } 
 
+  #post-tag {
+     font-size: 12px;
+ }
+
  #post-tag:after {
      content: "//";
      position: relative;
      top: 0;
      bottom: 0;
      right: 0;
-     left: 12px;
+     left: 8px;
  }
+ @media screen and (max-width: 768px) {
+     #post-date {
+         margin-top: 0.5rem!important;
+    }
+ }
+ 
 
 /** ====================================== 
  * POST TEXT Styles 
  */
 
 #post-text {
-    font-family: 'Halant', serif;
+    font-family: 'Libre Caslon Text', serif;
     font-size: 1.5rem;
     /* line-height: 2rem; */
 }
 
 .post-invite {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     color: #FF416C;
     cursor: pointer;
     transition: all ease-in-out 0.1s;
@@ -164,13 +168,13 @@ export default {
 }
 
 .text-time {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     color: #333;
 }
 
 .text-writer {
-    font-family: 'Catamaran', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -203,6 +207,7 @@ hr.v-divide-emphasis {
 
 .post-reco-banner-image {
     max-height: 150px;
+    min-height: 150px;
     /* max-width: 85vw; */
     max-width: 200px;
     object-fit: contain; 

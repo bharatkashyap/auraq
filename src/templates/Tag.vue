@@ -1,7 +1,7 @@
 <template>
 <layout>
-    <div>
-        <span class="mt-2 d-flex justify-content-center font-subheading font-weight-light font-size-large mt-3"> Posts tagged <span class="ml-1 post-invite">{{ $page.tag.Name }}</span></span>
+    <div class="grid-container-page">
+        <span class="mt-2 full-width-grid text-center font-subheading font-weight-light font-size-large mt-3"> Posts tagged <span class="ml-1 post-invite">{{ $page.tag.Name }}</span></span>
         <post-card v-for="edge in filteredPosts" :key="edge.node.id" :post="edge.node" v-observe-visibility="visibilityObserver"></post-card>
     </div>
 </layout>
@@ -77,3 +77,29 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+.grid-container-page {
+display: grid;
+grid-template-columns: 1fr;
+}
+
+.full-width-grid {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.full-width-grid {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+  
+}
+</style>
