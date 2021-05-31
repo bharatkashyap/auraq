@@ -153,14 +153,12 @@ export default {
     addSubscriber({ commit, state }) {
       commit('mutateSubscriptionStatusPending', true);
       let backendEnvironment = process.env.NODE_ENV;
-    
-      let bearerToken = backendEnvironment === state.config.env.prod ? process.env.API_BEARER_TOKEN : process.env.GRIDSOME_DEV_BEARER_TOKEN;
-      console.log(state.subscriberEmail);
+      let bearerToken = backendEnvironment === state.config.env.prod ? process.env.API_BEARER_TOKEN : process.env.GRIDSOME_DEV_BEARER_TOKEN;  
+
       fetch(`${state.config.backendAPI[backendEnvironment]}${state.config.subscribeEndpoint}`, {
         method: "POST",
         headers: {       
-          'Content-Type': `application/json`,   
-          'Authorization': `Bearer ${bearerToken}`
+          'Content-Type': `application/json`          
         },
         body: JSON.stringify({ email : state.subscriberEmail })
       }).then(response => { return response.text() })
