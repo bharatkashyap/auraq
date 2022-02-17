@@ -85,7 +85,7 @@ export default {
 }
 
 .share-email {
-    font-family: 'Libre Caslon Text', sans-serif;
+    font-family: 'DM Sans', serif;
 }
 
 .sub-form input {

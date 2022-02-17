@@ -14,6 +14,15 @@
                 </div>
                 <div id="post-heading" class="mt-2 align-items-start text-center display-4">{{post.Heading}}</div>
                 <div id="post-sub-head" class="mt-3 text-center text-secondary" v-html="post.Description"></div>
+                <div id="post-reading-time" class="text-time mt-2">
+                    {{ post.Reading_Time }} min read
+                </div>
+                <div
+                    id="post-date"
+                    class="mt-1 ml-3 text-center font-size-sm"
+                >
+                    {{ sanitiseDate(post.Date) }}
+                </div>
                 <!-- <div id="post-sub-meta" class="d-flex flex-row text-center">
                     <div id="post-date" class="text-time mt-2">{{sanitiseDate(post.Date)}}</div> -->
                     <!-- <div id="post-reading-time" class="text-time ml-4 mt-2">{{post.Reading_Time}} min read</div>                     
