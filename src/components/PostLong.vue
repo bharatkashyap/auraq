@@ -33,6 +33,16 @@
             </div>
           </div>
           <div
+            id="post-cover-image-container"
+            class="mt-2 align-items-start text-center text-lg-left display-4"
+          >
+            <img
+              v-if="post.Pics.length"
+              :src="post.Pics[0].url"
+              class="mt-3 post-cover-image"
+            />
+          </div>
+          <div
             id="post-heading"
             class="mt-2 align-items-start text-center text-lg-left display-4"
           >
@@ -53,11 +63,7 @@
             {{ sanitiseDate(post.Date) }}
           </div>
           <hr class="v-divide w-75 mb-0 p-2" />
-          <div
-            id="post-text"
-            class="w-75 mt-3 text-justify"
-            v-html="post.Notes"
-          ></div>
+          <div id="post-text" class="w-75 mt-3" v-html="post.Notes"></div>
         </div>
       </div>
       <image-gallery v-if="post.Pics.length" :pics="post.Pics"></image-gallery>
@@ -222,7 +228,7 @@ export default {
  */
 
 #post-text {
-  font-family: "Libre Caslon Text", serif;
+  font-family: "Halant", serif;
   font-size: 1.2rem;
   /* line-height: 2rem; */
 }
@@ -272,7 +278,7 @@ hr.v-divide-emphasis {
   border-top-color: #ff416c !important;
 }
 /** ======================================
-* IMAGE BANNER Styles
+* IMAGE BANNER/COVER Styles
 */
 
 .post-banner-image {
@@ -282,8 +288,13 @@ hr.v-divide-emphasis {
   object-fit: contain;
 }
 
+.post-cover-image {
+  max-height: 400px;
+  max-width: 100vw;
+}
+
 /** ======================================
-* IMAGE BANNER Styles
+* IMAGE INLINE Styles
 */
 
 #post-text figure img {

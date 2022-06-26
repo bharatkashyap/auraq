@@ -1,9 +1,13 @@
 <template>
-<layout>
-  <div id="posts-container mb-1" class="grid-container">
-    <post-card v-for="edge in orderedPosts" :key="edge.node.id" :post="edge.node"></post-card>
-  </div>
-</layout>
+  <layout>
+    <div id="posts-container mb-1" class="grid-container">
+      <post-card
+        v-for="edge in orderedPosts"
+        :key="edge.node.id"
+        :post="edge.node"
+      ></post-card>
+    </div>
+  </layout>
 </template>
 
 <page-query>
@@ -40,12 +44,11 @@ query Post {
 </page-query>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapActions } from "vuex";
 import PostCard from "~/components/PostCard.vue";
 import Loader from "~/components/Loader.vue";
 
 export default {
-
   data: () => {
     return {
       // fetchedComments: [],
@@ -54,22 +57,26 @@ export default {
       // postComments: [],
       localLikedPosts: [],
       // isStub: true
-      gapiAuth2Loaded: false
-    }
+      gapiAuth2Loaded: false,
+    };
   },
   components: {
     PostCard,
-    Loader
+    Loader,
   },
-  computed : {
+  computed: {
     filteredPosts() {
-      return this.$page.posts.edges.filter( post => post.node.isHidden == "False" );
+      return this.$page.posts.edges.filter(
+        (post) => post.node.isHidden == "False"
+      );
     },
     orderedPosts() {
-      return this.filteredPosts.sort( (a, b) => new Date(b.node.Date) - new Date(a.node.Date) );
+      return this.filteredPosts.sort(
+        (a, b) => new Date(b.node.Date) - new Date(a.node.Date)
+      );
     },
     // visibilityObserver() {
-    //   return {    
+    //   return {
     //       callback: this.visibilityChanged,
     //       threshold: 0.2,
     //       once: true
@@ -78,15 +85,15 @@ export default {
     ...mapState([
       //'verifiedGoogleUserStatus',
       //'verifiedGoogleUser'
-    //   'config',
-    //   'viewport',
-    //   'fetchedPosts',
-    //   'fetchedPostsStatus',
-    //   'fetchedTagsStatus',
-    //   'computedPosts',
-      'fetchedUser',
-    //   'likedPosts'
-    ])
+      //   'config',
+      //   'viewport',
+      //   'fetchedPosts',
+      //   'fetchedPostsStatus',
+      //   'fetchedTagsStatus',
+      //   'computedPosts',
+      "fetchedUser",
+      //   'likedPosts'
+    ]),
   },
   methods: {
     // fadeElementIn(id) {
@@ -100,26 +107,27 @@ export default {
     updateLikes(status, id) {
       // status => to be set
       this.localLikedPosts = this.likedPosts;
-      if(status) { this.localLikedPosts = this.likedPosts.concat([id]); }
-      else { this.localLikedPosts = this.likedPosts.filter(p => p !== id); }
-      this.likePost( { posts: this.localLikedPosts, id: id});
+      if (status) {
+        this.localLikedPosts = this.likedPosts.concat([id]);
+      } else {
+        this.localLikedPosts = this.likedPosts.filter((p) => p !== id);
+      }
+      this.likePost({ posts: this.localLikedPosts, id: id });
     },
-    ...mapActions([
-      'loadGapiAuth2'
-    ])
+    ...mapActions(["loadGapiAuth2"]),
   },
- 
+
   mounted() {
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
     window.initGapi = () => {
-      if(this.gapiAuth2Loaded == false) {
+      if (this.gapiAuth2Loaded == false) {
         this.loadGapiAuth2();
         this.gapiAuth2Loaded = true;
       }
-    }
-    // If script is not loaded afresh (cached), nitGapi is not fired. 
-    if(window.gapi && this.gapiAuth2Loaded == false) {
+    };
+    // If script is not loaded afresh (cached), nitGapi is not fired.
+    if (window.gapi && this.gapiAuth2Loaded == false) {
       this.loadGapiAuth2();
       this.gapiAuth2Loaded = true;
     }
@@ -131,8 +139,6 @@ export default {
         .then(res => {
             this.fetchedComments = res.records;
         }) */
-  }
-}
-
+  },
+};
 </script>
-
