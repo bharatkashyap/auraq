@@ -36,6 +36,12 @@ export default function(Vue, { router, head, isClient, appOptions }) {
   head.link.push({
     rel: "stylesheet",
     href:
-      "https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=DM+Serif+Text&family=Libre+Caslon+Text&display=swap",
+      "https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=DM+Serif+Text&family=Halant:wght@400&display=swap",
+  });
+
+  head.meta.push({
+    name: "viewport",
+    content:
+      "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   });
 }
