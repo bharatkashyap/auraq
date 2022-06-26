@@ -1,54 +1,51 @@
 <template>
   <div id="app">
     <div class="container-fluid p-0 w-100" id="main-wrapper">
-      <div class="wrapper-main" :class="{night: nightMode}">
-
+      <div class="wrapper-main" :class="{ night: nightMode }">
         <Header />
         <transition name="fade" appear>
-          <main>  
+          <main>
             <slot />
-            <Return-Home v-if="!root"/>
+            <Return-Home v-if="!root" />
           </main>
         </transition>
         <Footer />
-        <!-- <Loader v-else></Loader> -->        
+        <!-- <Loader v-else></Loader> -->
       </div>
     </div>
   </div>
 </template>
 
-
-
 <script>
-import { mapState, mapActions, mapMutations } from 'vuex';
-import Header from '~/components/Header.vue'
-import Footer from '~/components/Footer.vue'
-import ReturnHome from '~/components/ReturnHome.vue'
+import { mapState, mapActions, mapMutations } from "vuex";
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
+import ReturnHome from "~/components/ReturnHome.vue";
 
 export default {
-  data: function () {
+  data: function() {
     return {
       //nightMode: false,
       viewport: {},
-      gapiAuth2Loaded: false
-    }
+      gapiAuth2Loaded: false,
+    };
   },
   components: {
     Header,
     Footer,
-    ReturnHome
+    ReturnHome,
   },
   computed: {
-    root () {
+    root() {
       return this.$route.path === "/" ? true : false;
     },
     ...mapState([
-      'nightMode',
-      'fetchedUserStatus',
-      'foundNoGoogleUser',
-      'likedPosts',
-      'stickHeader'
-    ])
+      "nightMode",
+      "fetchedUserStatus",
+      "foundNoGoogleUser",
+      "likedPosts",
+      "stickHeader",
+    ]),
   },
   methods: {
     toggleNightMode() {
@@ -56,7 +53,7 @@ export default {
     },
     captureAndTransmitViewport() {
       this.viewport.width = screen.availWidth;
-      this.viewport.height= screen.availHeight;
+      this.viewport.height = screen.availHeight;
       this.mutateViewport(this.viewport);
     },
     handleResize() {
@@ -64,16 +61,12 @@ export default {
     },
     handleScroll() {
       let header = document.getElementById("header");
-      if(window.pageYOffset > (header && header.clientHeight)) this.mutateStickHeader(true);
+      if (window.pageYOffset > (header && header.clientHeight))
+        this.mutateStickHeader(true);
       else this.mutateStickHeader(false);
     },
-    ...mapMutations([
-      'mutateViewport',
-      'mutateStickHeader'
-    ]),
-    ...mapActions([
-      'loadGapiAuth2'
-    ])
+    ...mapMutations(["mutateViewport", "mutateStickHeader"]),
+    ...mapActions(["loadGapiAuth2"]),
   },
   mounted() {
     window.addEventListener("resize", this.handleResize);
@@ -94,8 +87,7 @@ export default {
   destroyed() {
     window.removeEventListener("resize", this.handleResize);
   },
-  
-}
+};
 </script>
 
 <style>
@@ -105,7 +97,7 @@ export default {
   background-position: center;
   background-size: contain;
   background-blend-mode: hue;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   transition: opacity 0.5s ease-in, background-color 0.2s ease-in;
 }
 
@@ -114,7 +106,7 @@ export default {
   z-index: 20;
   top: -1px;
   background-color: #fff;
-  background-image: none; 
+  background-image: none;
   transition: opacity 0.1s ease-in, background-color 0.2s ease-in;
 }
 
@@ -127,11 +119,16 @@ export default {
 }
 
 .fade-enter-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .fade-enter {
   opacity: 0;
 }
 
+#main-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  color: red;
+}
 </style>

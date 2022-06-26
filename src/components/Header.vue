@@ -19,13 +19,13 @@
     :class="{ night: nightMode, 'o-0': stickHeader }"
     class="d-flex flex-row w-100 align-items-center"
   >
-    <div id="night-mode" class="pl-2">
+    <!-- <div id="night-mode" class="pl-2">
       <div
         class="night-mode-button icon-svg icon-svg-small"
         :class="{ day: nightMode }"
         @click="toggleNightMode"
       ></div>
-    </div>
+    </div> -->
     <!-- <div id="subscribe-button" class="pl-2">
             <div class="sub-button icon-svg icon-svg-small" :class="{day: nightMode}" @click="scrollToSubscriberBox"></div>
           </div> -->
