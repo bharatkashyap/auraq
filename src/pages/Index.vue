@@ -131,14 +131,6 @@ export default {
       this.loadGapiAuth2();
       this.gapiAuth2Loaded = true;
     }
-    //if(!this.fetchedPostsStatus) this.fetchPosts();
-    /* fetch(`https://api.airtable.com/v0/appvFZdnU9Q1R8Nao/Comments`, {
-            method: "GET",
-            headers: this.airtableAuthToken
-        }).then(response => { return response.json() })
-        .then(res => {
-            this.fetchedComments = res.records;
-        }) */
   },
 };
 </script>
