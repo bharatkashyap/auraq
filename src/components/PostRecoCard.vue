@@ -139,12 +139,6 @@ export default {
   /* font-weight: 500; */
 }
 
-#post-sub-head {
-  font-family: "DM Sans", sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.02cm;
-}
-
 /** ======================================
  * POST META Styles
  */

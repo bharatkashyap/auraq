@@ -43,13 +43,13 @@
             />
           </div>
           <div
-            id="post-heading"
+            id="post-heading-long"
             class="mt-2 align-items-start text-center text-lg-left display-4"
           >
             {{ post.Heading }}
           </div>
           <div
-            id="post-sub-head"
+            id="post-sub-head-long"
             class="mt-2 text-center mx-1 text-secondary"
             v-html="post.Description"
           ></div>
@@ -172,8 +172,8 @@ export default {
  * HEADING TYPOGRAPHY Styles 
  */
 
-#post-heading {
-  font-family: "Playfair Display";
+#post-heading-long {
+  font-family: "DM Serif Text", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
 }
@@ -196,7 +196,7 @@ export default {
   /* font-weight: 500; */
 }
 
-#post-sub-head {
+#post-sub-head-long {
   font-family: "DM Sans", sans-serif;
   font-size: 1.2rem;
   letter-spacing: 0.02cm;
