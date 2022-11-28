@@ -85,7 +85,7 @@ export default {
     PostLong,
   },
   computed: {
-    ...mapState(["likedPosts"]),
+    ...mapState(["likedPosts", "config"]),
   },
   methods: {
     updateLikes(status, id) {
