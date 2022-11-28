@@ -10,9 +10,10 @@ export default {
     stickHeader: false,
     config: {
       backendAPI: {
-        production: "https://badarpur.herokuapp.com",
+        production: "https://badarpur.bharatk.in",
         development: "http://localhost:3000",
       },
+      CDN_PATH: "https://badarpur.bharatk.in/static/auraq",
       env: {
         dev: "development",
         prod: "production",

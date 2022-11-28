@@ -38,7 +38,7 @@
           >
             <img
               v-if="post.Pics.length"
-              :src="post.Pics[0].url"
+              :src="`${config.CDN_PATH}/${post.id}/0.jpg`"
               class="mt-3 post-cover-image"
             />
           </div>
@@ -66,7 +66,11 @@
           <div id="post-text" class="w-75 mt-3" v-html="post.Notes"></div>
         </div>
       </div>
-      <image-gallery v-if="post.Pics.length" :pics="post.Pics"></image-gallery>
+      <image-gallery
+        v-if="post.Pics.length"
+        :pics="post.Pics"
+        :id="post.id"
+      ></image-gallery>
       <Disqus />
       <!-- <post-actions  :comments="post.Comments" :likes="post.Likes" :post="post.id" @toggle-like="toggleLike" :liked="post.Liked" @submit-comment="submitComment"></post-actions> -->
     </div>
@@ -141,7 +145,7 @@ export default {
     authors: function() {
       return this.post.Writer.map((writer) => (writer ? writer.Name : ""));
     },
-    ...mapState(["viewport", "fetchedTags"]),
+    ...mapState(["viewport", "fetchedTags", "config"]),
   },
   methods: {
     sanitiseDate(date) {

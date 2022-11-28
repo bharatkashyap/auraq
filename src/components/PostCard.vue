@@ -11,8 +11,9 @@
       >
         <img
           v-if="post.Pics.length"
-          :src="post.Pics[0].url"
-          class="mt-3 post-banner-image"
+          :src="`${config.CDN_PATH}/${post.id}/0.jpg`"
+          class="mt-3
+        post-banner-image"
         />
       </div>
 
@@ -69,7 +70,7 @@
 </template>
 
 <script>
-//import { mapState, mapActions } from 'vuex';
+import { mapState } from "vuex";
 //import postPostComponent from "@/components/postPostComponent.vue";
 //import postImageGalleryComponent from "@/components/postImageGalleryComponent.vue";
 
@@ -108,10 +109,7 @@ export default {
     tag: function() {
       return this.post.Tag ? this.post.Tag[0] : "";
     },
-    // ...mapState([
-    //     'viewport',
-    //     'fetchedTags'
-    // ])
+    ...mapState(["config"]),
   },
   methods: {
     // getTag(id) {

@@ -18,7 +18,9 @@
         :key="index"
         :ref="pic.id"
       >
-        <div class="image text-center"><img :src="pic.url" /></div>
+        <div class="image text-center">
+          <img :src="`${config.CDN_PATH}/${id}/${index}.jpg`" />
+        </div>
       </div>
     </div>
     <!-- <div v-else id="post-stub-image-gallery" class="justify-content-center my-3">
@@ -52,6 +54,7 @@ export default {
   name: "ImageGallery",
   props: {
     pics: Array,
+    id: String,
     isStub: Boolean,
   },
   data: function() {
@@ -69,7 +72,7 @@ export default {
     filteredPics: function() {
       return this.pics.filter((p, i) => i !== 0);
     },
-    ...mapState(["viewport"]),
+    ...mapState(["viewport", "config"]),
   },
   methods: {
     isImageSelected(index) {
