@@ -70,7 +70,9 @@ export default {
         { property: "og:description", content: this.$page.post.Description },
         {
           property: "og:image",
-          content: `${config.CDN_PATH}/${post.id}/0.jpg`,
+          content: `https://badarpur.bharatk.in/static/auraq/${
+            this.$page.post.id
+          }/0.jpg`,
         },
         { property: "twitter:card", content: "summary_large_image" },
       ],
