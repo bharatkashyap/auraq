@@ -237,6 +237,17 @@ export default {
   /* line-height: 2rem; */
 }
 
+#post-text a {
+  color: #ff416c !important;
+  text-decoration: none !important;
+  transition: all ease-in-out 0.2s;
+}
+
+#post-text blockquote,
+#post-text cite {
+  margin-left: 2rem;
+}
+
 .post-invite {
   font-family: "DM Sans", sans-serif;
   color: #ff416c;
