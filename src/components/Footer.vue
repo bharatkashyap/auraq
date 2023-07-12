@@ -12,11 +12,11 @@
         >{{ subscriptionStatus ? "Thank you!" : "Stay in touch" }}
       </span>
       <span v-if="!subscriptionStatus" class="ml-1 mt-2 share-email text-left">
-        Receive occasional updates from the latest issues of
-        <span class="text-heading font-heading">Auraq</span>.
+        Subscribe to receive emails when new posts go up on
+        <span class="text-heading font-heading">Auraq</span>. No spam, ever.
       </span>
-      <span v-else class="ml-1 mt-2 share-email text-left">
-        Look out for emails from <code>hello@auraq.in</code>
+      <span v-else class="ml-1 mt-2 thanks-email">
+        Look out for emails from <code>Auraq</code> 😁
       </span>
       <div
         v-if="!subscriptionStatus"
@@ -100,8 +100,13 @@ export default {
   font-family: "Halant", sans-serif;
 }
 
+.thanks-email {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
 .sub-form input {
-  font-family: "Halant", sans-serif;
+  font-family: "DM Sans", sans-serif;
   padding-left: 18px;
   border: 0;
   height: 24px;

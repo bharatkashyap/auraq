@@ -12,8 +12,8 @@
         <img
           v-if="post.Pics.length"
           :src="`${config.CDN_PATH}/${post.id}/0.jpg`"
-          class="mt-3
-        post-banner-image"
+          class="mt-3 post-banner-image"
+          :loading="post.isHeadine ? 'lazy' : 'unset'"
         />
       </div>
 
@@ -179,6 +179,7 @@ export default {
 
   .headline .post-banner-image {
     max-width: 500px;
+    aspect-ratio: 4/3;
   }
 }
 
@@ -339,12 +340,14 @@ hr.v-divide-emphasis {
   min-width: 400px;
   max-width: 400px;
   object-fit: contain;
+  aspect-ratio: 4/3;
 }
 
 @media screen and (max-width: 768px) {
   .post-banner-image {
     min-width: 300px;
     max-width: 300px;
+    aspect-ratio: 4/3;
   }
 
   .headline #post-stub {

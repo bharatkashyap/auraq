@@ -63,7 +63,7 @@
             {{ sanitiseDate(post.Date) }}
           </div>
           <hr class="v-divide w-75 mb-0 p-2" />
-          <div id="post-text" class="w-75 mt-3" v-html="post.Notes"></div>
+          <div id="post-text" class="mt-3" v-html="post.Notes"></div>
         </div>
       </div>
       <image-gallery
@@ -233,8 +233,16 @@ export default {
 
 #post-text {
   font-family: "Halant", serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  width: 62.5vw;
+  text-align: justify;
   /* line-height: 2rem; */
+}
+
+@media screen and (max-width: 640px) {
+  #post-text {
+    width: 75vw;
+  }
 }
 
 #post-text a {
@@ -301,11 +309,14 @@ hr.v-divide-emphasis {
   /* max-width: 85vw; */
   max-width: 400px;
   object-fit: contain;
+  aspect-ratio: 4/3;
 }
 
 .post-cover-image {
+  min-height: 400px;
   max-height: 400px;
   max-width: 100vw;
+  aspect-ratio: 3/2;
 }
 
 /** ======================================

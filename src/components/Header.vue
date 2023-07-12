@@ -38,7 +38,7 @@
         id="heading-illustration"
         class="fade-in text-center align-self-center mt-5 d-flex flex-column mr-2"
       >
-        <img src="~@/assets/img/undraw_not_found_60pq.svg" />
+        <img src="~@/assets/img/auraq_logo.svg" />
       </div>
       <div
         id="heading-text"
@@ -75,7 +75,6 @@ export default {
 
 <style>
 #header {
-  /* background-image: url("~@/assets/img/undraw_not_found_60pq.svg");  */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -99,5 +98,6 @@ export default {
 
 #heading-illustration img {
   height: 2rem;
+  aspect-ratio: 2/1;
 }
 </style>

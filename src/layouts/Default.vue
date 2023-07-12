@@ -92,7 +92,6 @@ export default {
 
 <style>
 #header {
-  /* background-image: url("~@/assets/img/undraw_not_found_60pq.svg");  */
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -116,6 +115,7 @@ export default {
 
 #heading-illustration img {
   height: 2rem;
+  aspect-ratio: 2/1;
 }
 
 .fade-enter-active {

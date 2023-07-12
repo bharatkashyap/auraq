@@ -11,7 +11,10 @@ export default {
     config: {
       backendAPI: {
         production: "https://badarpur.bharatk.in",
-        development: "http://localhost:3000",
+        development: "http://localhost:8000",
+      },
+      listmonkAPI: {
+        production: "https://listmonk.bharatk.in/api",
       },
       CDN_PATH: "https://badarpur.bharatk.in/static/auraq",
       env: {
@@ -25,7 +28,7 @@ export default {
       tagsEndpoint: "/tags",
       likeEndpoint: "/like",
       userEndpoint: "/user",
-      subscribeEndpoint: "/subscribe",
+      subscribeEndpoint: "/subscribers",
       googleVerifyUserEndpoint:
         "https://oauth2.googleapis.com/tokeninfo?id_token=",
     },
@@ -169,10 +172,6 @@ export default {
     addSubscriber({ commit, state }) {
       commit("mutateSubscriptionStatusPending", true);
       let backendEnvironment = process.env.NODE_ENV;
-      let bearerToken =
-        backendEnvironment === state.config.env.prod
-          ? process.env.API_BEARER_TOKEN
-          : process.env.GRIDSOME_DEV_BEARER_TOKEN;
 
       fetch(
         `${state.config.backendAPI[backendEnvironment]}${
@@ -187,6 +186,7 @@ export default {
         }
       )
         .then((response) => {
+          console.log(response);
           return response.text();
         })
         .then((res) => {
