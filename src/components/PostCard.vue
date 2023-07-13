@@ -13,7 +13,7 @@
           v-if="post.Pics.length"
           :src="`${config.CDN_PATH}/${post.id}/0.jpg`"
           class="mt-3 post-banner-image"
-          :loading="post.isHeadine ? 'lazy' : 'unset'"
+          loading="lazy"
         />
       </div>
 

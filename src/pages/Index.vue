@@ -116,21 +116,8 @@ export default {
     },
     ...mapActions(["loadGapiAuth2"]),
   },
-
   mounted() {
     window.scrollTo(0, 0);
-
-    window.initGapi = () => {
-      if (this.gapiAuth2Loaded == false) {
-        this.loadGapiAuth2();
-        this.gapiAuth2Loaded = true;
-      }
-    };
-    // If script is not loaded afresh (cached), nitGapi is not fired.
-    if (window.gapi && this.gapiAuth2Loaded == false) {
-      this.loadGapiAuth2();
-      this.gapiAuth2Loaded = true;
-    }
   },
 };
 </script>

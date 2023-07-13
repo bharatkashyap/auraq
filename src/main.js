@@ -43,6 +43,7 @@ export default function(Vue, { router, head, isClient, appOptions }) {
     rel: "preload",
     href:
       "https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&family=DM+Serif+Text&family=Halant:wght@400&display=swap",
+    as: "font",
   });
 
   head.link.push({
