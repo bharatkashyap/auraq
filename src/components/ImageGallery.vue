@@ -19,7 +19,7 @@
         :ref="pic.id"
       >
         <div class="image text-center">
-          <img :src="`${config.CDN_PATH}/${id}/${index}.jpg`" />
+          <img :src="`${config.CDN_PATH}/${id}/${index}.jpg`" loading="lazy" />
         </div>
       </div>
     </div>
