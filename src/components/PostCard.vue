@@ -23,11 +23,13 @@
         class="d-flex flex-column ml-3 align-items-center cursor-pointer"
       >
         <div id="post-meta" class="mt-1 d-flex flex-row">
-          <div
-            id="post-tag"
-            class="mt-2 align-items-start align-self-center mr-3 text-uppercase"
-          >
-            {{ post.Tag[0].Name }}
+          <div id="post-tags" class="d-flex flex-row" v-if="post.Tag.length">
+            <div
+              v-for="(tag, index) in post.Tag"
+              class="mt-2 align-items-start align-self-center mr-3 text-uppercase post-tag"
+            >
+              {{ tag.Name }}
+            </div>
           </div>
           <div id="post-writer" class="text-writer mt-2 ml-2">
             <span v-for="(writer, index) in authors" :key="index"
@@ -146,8 +148,8 @@ export default {
 </script>
 
 <style>
-/** ====================================== 
- * HEADLINE CARD STYLES 
+/** ======================================
+ * HEADLINE CARD STYLES
 */
 @media screen and (min-width: 768px) {
   .headline {
@@ -183,8 +185,8 @@ export default {
   }
 }
 
-/** ====================================== 
- * HEADING TYPOGRAPHY Styles 
+/** ======================================
+ * HEADING TYPOGRAPHY Styles
  */
 
 #post-heading {
@@ -231,7 +233,7 @@ export default {
   opacity: 0.75;
 }
 
-#post-tag {
+.post-tag {
   font-size: 12px;
 }
 
@@ -239,7 +241,17 @@ export default {
   opacity: 0.5;
 }
 
-#post-tag:after {
+div.post-tag:not(:last-child)::after {
+  content: "+";
+  color: #595959;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0.5rem;
+}
+
+div.post-tag:last-child::after {
   content: "//";
   position: relative;
   top: 0;
@@ -248,8 +260,8 @@ export default {
   left: 0.5rem;
 }
 
-/** ====================================== 
- * POST TEXT Styles 
+/** ======================================
+ * POST TEXT Styles
  */
 
 .post-invite {
@@ -276,8 +288,8 @@ export default {
   color: #000;
 }
 
-/** ====================================== 
- * HORIZONTAL RULE Styles 
+/** ======================================
+ * HORIZONTAL RULE Styles
  */
 
 .v-divide {

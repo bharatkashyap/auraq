@@ -9,16 +9,18 @@
           class="d-flex flex-column flex-equal align-self-lg-start align-items-center align-items-lg-start align-items-lg-center"
         >
           <div id="post-meta" class="mt-2 d-flex flex-row">
-            <div
-              id="post-tag"
-              class="mt-2 align-items-start align-self-center mr-3 text-uppercase"
-            >
-              <span
-                class="post-invite border border-left-0 border-right-0 border-top-0"
-                ><g-link :to="`/tag/${post.Tag[0].Name.toLowerCase()}`">{{
-                  post.Tag[0].Name
-                }}</g-link></span
+            <div id="post-tags" v-if="post.Tag.length" class="d-flex flex-row">
+              <div
+                v-for="(tag, index) in post.Tag"
+                class="mt-2 align-items-start align-self-center mr-3 text-uppercase post-tag"
               >
+                <span
+                  class="post-invite border border-left-0 border-right-0 border-top-0"
+                  ><g-link :to="`/tag/${tag.Name.toLowerCase()}`">{{
+                    tag.Name
+                  }}</g-link></span
+                >
+              </div>
             </div>
             <div id="post-writer" class="text-writer mt-2">
               <span
@@ -214,11 +216,21 @@ export default {
   opacity: 0.75;
 }
 
-#post-tag {
+.post-tag {
   font-size: 12px;
 }
 
-#post-tag:after {
+div.post-tag:not(:last-child)::after {
+  content: "+";
+  color: #595959;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0.5rem;
+}
+
+div.post-tag:last-child::after {
   content: "//";
   position: relative;
   top: 0;
