@@ -10,13 +10,13 @@ export default {
     stickHeader: false,
     config: {
       backendAPI: {
-        production: "https://badarpur.bharatk.in",
+        production: "https://badarpur.auraq.in",
         development: "http://localhost:8000",
       },
       listmonkAPI: {
-        production: "https://listmonk.bharatk.in/api",
+        production: "https://listmonk.auraq.in/api",
       },
-      CDN_PATH: "https://badarpur.bharatk.in/static/auraq",
+      CDN_PATH: "https://badarpur.auraq.in/static/auraq",
       env: {
         dev: "development",
         prod: "production",
