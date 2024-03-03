@@ -114,8 +114,8 @@ export default {
 }
 
 #heading-illustration img {
-  height: 2rem;
-  aspect-ratio: 2/1;
+  scale: 1.45;
+  aspect-ratio: 1/1;
 }
 
 .fade-enter-active {

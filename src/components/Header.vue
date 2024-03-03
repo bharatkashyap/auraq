@@ -36,9 +36,9 @@
     >
       <div
         id="heading-illustration"
-        class="fade-in text-center align-self-center mt-5 d-flex flex-column mr-2"
+        class="fade-in text-center align-self-center mt-4 d-flex flex-column mr-2"
       >
-        <img src="~@/assets/img/auraq_logo.svg" />
+        <img src="~@/assets/img/auraq_logo.png" />
       </div>
       <div
         id="heading-text"
@@ -97,7 +97,7 @@ export default {
 }
 
 #heading-illustration img {
-  height: 2rem;
-  aspect-ratio: 2/1;
+  scale: 1.45;
+  aspect-ratio: 1/1;
 }
 </style>
