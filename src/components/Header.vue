@@ -97,7 +97,7 @@ export default {
 }
 
 #heading-illustration img {
-  scale: 1.45;
+  height: 5rem;
   aspect-ratio: 1/1;
 }
 </style>
