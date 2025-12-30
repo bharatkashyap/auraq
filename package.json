@@ -2,6 +2,11 @@
   "name": "auraq",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=11.6.4",
+    "pnpm": ">=10.11.0"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
