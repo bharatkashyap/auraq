@@ -1,20 +1,29 @@
 {
   "name": "auraq",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.16.0",
+    "npm": ">=11.6.4",
+    "pnpm": ">=10.11.0"
+  },
   "scripts": {
-    "build": "gridsome build",
-    "dev": "gridsome develop",
-    "explore": "gridsome explore"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
   },
   "dependencies": {
-    "airtable": "^0.7.1",
-    "bootstrap": "^4.3.1",
-    "gridsome": "^0.6.0",
-    "vue-disqus": "^4.0.1",
-    "vue-observe-visibility": "^0.4.4",
-    "vuex": "^3.1.1"
+    "@nuxt/content": "^3.8.2",
+    "airtable": "^0.12.2",
+    "better-sqlite3": "^12.5.0",
+    "cheerio": "^1.1.2",
+    "nuxt": "^4.2.1"
   },
-  "resolutions": {
-    "gridsome/sharp": "0.29.3"
+  "devDependencies": {
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

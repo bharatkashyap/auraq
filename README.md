@@ -1,14 +1,75 @@
-# Default starter for Gridsome
+# Nuxt Content Starter
 
-This is the project you get when you run `gridsome create new-project`.
+Look at the [Nuxt Content documentation](https://content.nuxt.com) to learn more.
 
-### 1. Install Gridsome CLI tool if you don't have
+## Setup
 
-`npm install --global @gridsome/cli`
+Make sure to install dependencies:
 
-### 2. Create a Gridsome project
+```bash
+# npm
+npm install
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
