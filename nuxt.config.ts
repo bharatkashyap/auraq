@@ -7,6 +7,10 @@ export default defineNuxtConfig({
   ],
   css: [],
 
+  nitro: {
+    preset: 'vercel-static'
+  },
+
   googleFonts: {
     families: {
       Merriweather: [300, 400, 700, 900],
