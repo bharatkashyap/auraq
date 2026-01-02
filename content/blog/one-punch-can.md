@@ -12,33 +12,37 @@ comments: []
 > "How do you all know each other?" \
 > Silence. (No one really knows what to say) \
 > "Childhood friends." \
-> "Wow, still in touch!"
+> "Wow, still close!"
 
-Human society usually awards great surprise and admiration to anything that has been maintained over a very long term. This is true about many things: buildings that look new even though they were built decades ago; people who are physically and mentally healthy even though they too were built decades ago.
+Long-term maintenance is impressive. This is true about most things: buildings that look new even though they were built decades ago; people who are physically and mentally healthy even though they too were built decades ago.
 
-This is also true, as I'm finding out, about friendship.
+This is also true about friendship.
 
-A hastily-planned trip to Goa in the summer of 2025 saw multiple such occasions: from co-diners at restaurants to co-shallow-dippers at beaches, all offering words of respect at a friendship evidently maintained over all these years.
+A sequence from the 2001 Hindi classic film "Dil Chahta Hai" agrees: when, in the middle of their Goa trip, one of the protagonists proposes making a pact to return once each year, his friend – the most pragmatic one of the trio – replies with pessimistic realism: that their lives are like the ships they see in the distant ocean; in all likelihood, they'd be lucky to see each other once in ten years once life and time happen to them all.
+
+A summer 2025 trip to Goa with friends from time immemorial brought me close to this sequence: both geographically and substantively.
+
+For the former: signage to visit Chapora Fort, popularised by this exact scene so much so that it is often dubbed as the "Dil Chahta Hai" fort, was stuck on every other tree near our Airbnb. Even though I was curious since I've never actually visited, the rest of the friend group barely registered them. Perhaps for a later trip.
+
+Signs of the latter, however, were noticed by everyone: from co-diners at restaurants to co-shallow-dippers at beaches, we ran into multiple instances of people offering admiration at a friendship evidently maintained over all these years. We never really knew what to say, partially because no one knew what we'd done to deserve this praise.
 
 ::blog-image{src="/images/blog/one-punch-can/1.jpg" alt="Goa Trip" align="right"}
 ::
 
-This is perhaps also a sign of aging, but we will not dwell on that too much.
+"We met each other when we were kids and years have passed since" hardly feels like an achievement. Most of us have lost touch for multiple years in between; some of us have, in fact, been friends only through a transitive relationship rather than a direct one. For better or worse, no active "effort" seems to have put in to "maintaining" this friendship.
 
-All this praise merited, in my mind, the question: what have we done to deserve it?
+Something, then, seems to set apart this sort of friendship: people who you met at a time you remember only as fleeting frames and flashes. They are the flesh and blood evidence of the passage of your own life; a repository of material and immaterial memory that lives as shared visuals in common memory - the sort that is never talked about, only laughed over.
 
-The answer seems elusive, since I can not think of any effort in particular being made specifically to continue having these friends.
-
-Perhaps there is the effort which goes in to bringing a trip from chat threads out into the real world. The course of modern adult life sees many of these invitations extended, with little sincerity on the part of the extender or the extendee. Most of these plans evaporate even before they could be planned out; most of the ones that make it to the planning stage are unfortunately buried there.
+There is indeed effort needed in bringing a trip from chat threads out into the real world. The course of modern adult life sees many of such grand invitations extended, most of which evaporate even before turning into real plans. The ones that make it to the planning stage are, most often, silently buried there.
 
 ::blog-image{src="/images/blog/one-punch-can/2.jpg" alt="Trip Planning Chat" align="left"}
 ::
 
-Even the happening of a trip itself, then, is testimony of effort. Researching, planning, booking - all real work that someone must take on.
+Even the happening of a trip itself, then, is testimony of some effort. Researching, planning, booking - all real work that someone must take on.
 
-From experience, I've come to find that the efficiency of coordination is directly proportional to the vintage of the friend group. There could be many theories as to why that is, but the one I most believe in is that for long-term friends, there is a deep and implicit understanding of every one's strengths, and a strong compromise with every one's weaknesses. Negotiation and communication is not required; everyone knows and agrees with what's expected of them, and therefore, things just get done.
+There is the kind of friend group where there are too many cooks, and therefore dysfunction occurs. I think co-ordination improves in direct proportion to the vintage of the friendship, since with time, there develops a deep and implicit understanding of every one's strengths, and a strong compromise with every one's weaknesses. Negotiation and communication is barely required; everyone knows and agrees with what's expected of them, and therefore, things just get done.
 
-I wonder if pit crews on F1 teams that have known one another for a long time are more efficient than others that haven't. Subject perhaps for some kind of social science research.
+I wonder if pit crews on F1 teams that have known one another for a longer time are more efficient than others that haven't. Subject perhaps for some kind of social science research.
 
 ::blog-image{src="/images/blog/one-punch-can/3.jpg" alt="Pits and Coordination" align="right"}
 ::
