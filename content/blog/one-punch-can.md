@@ -20,20 +20,18 @@ This is also true about friendship.
 
 A sequence from the 2001 Hindi classic film "Dil Chahta Hai" agrees: when, in the middle of their Goa trip, one of the protagonists proposes making a pact to return once each year, his friend – the most pragmatic one of the trio – replies with pessimistic realism: that their lives are like the ships they see in the distant ocean; in all likelihood, they'd be lucky to see each other once in ten years once life and time happen to them all.
 
-A summer 2025 trip to Goa with friends from time immemorial brought me close to this sequence: both geographically and substantively.
+A summer 2025 trip to Goa with friends from time immemorial brought me close to this sequence, quite literally: signage to visit Chapora Fort, also dubbed as the "Dil Chahta Hai" fort due to this very scene, was stuck on every other tree near our Airbnb. Even though I was curious since I've never actually visited, the rest of the friend group barely noticed. Perhaps for a later trip.
 
-For the former: signage to visit Chapora Fort, popularised by this exact scene so much so that it is often dubbed as the "Dil Chahta Hai" fort, was stuck on every other tree near our Airbnb. Even though I was curious since I've never actually visited, the rest of the friend group barely registered them. Perhaps for a later trip.
-
-Signs of the latter, however, were noticed by everyone: from co-diners at restaurants to co-shallow-dippers at beaches, we ran into multiple instances of people offering admiration at a friendship evidently maintained over all these years. We never really knew what to say, partially because no one knew what we'd done to deserve this praise.
+Metaphorically, however, the signs were everywhere: from co-diners at restaurants to co-shallow-dippers at beaches, we ran into multiple instances of people offering admiration at a friendship evidently maintained over all these years. We never really knew what to say, partially because no one knew what we'd done to deserve this praise.
 
 ::blog-image{src="/images/blog/one-punch-can/1.jpg" alt="Goa Trip" align="right"}
 ::
 
 "We met each other when we were kids and years have passed since" hardly feels like an achievement. Most of us have lost touch for multiple years in between; some of us have, in fact, been friends only through a transitive relationship rather than a direct one. For better or worse, no active "effort" seems to have put in to "maintaining" this friendship.
 
-Something, then, seems to set apart this sort of friendship: people who you met at a time you remember only as fleeting frames and flashes. They are the flesh and blood evidence of the passage of your own life; a repository of material and immaterial memory that lives as shared visuals in common memory - the sort that is never talked about, only laughed over.
+Something, then, seems to set apart this sort of friendship: people who you do not even remember meeting; memory of being introduced exists only as fleeting frames and flashes. They are the flesh-and-blood evidence of the passage of your own life; a repository of moments that live as shared visuals in common memory - the sort that can not be talked about, only laughed over.
 
-There is indeed effort needed in bringing a trip from chat threads out into the real world. The course of modern adult life sees many of such grand invitations extended, most of which evaporate even before turning into real plans. The ones that make it to the planning stage are, most often, silently buried there.
+The expected course for such friendship over much of modern history has been to dissolve and fade away. It is only us internet-native beings who are able to "keep in touch". Keeping in touch, however, is not sufficient to be able to go on a trip together: adult life sees many of such grand invitations extended and grand plans drawn, most of which evaporate before turning into anything real. The ones that make it to the planning stage are, most often, silently buried there.
 
 ::blog-image{src="/images/blog/one-punch-can/2.jpg" alt="Trip Planning Chat" align="left"}
 ::
@@ -47,7 +45,7 @@ I wonder if pit crews on F1 teams that have known one another for a longer time 
 ::blog-image{src="/images/blog/one-punch-can/3.jpg" alt="Pits and Coordination" align="right"}
 ::
 
-This hastily-planned Goa trip, then, was planned enough to have something for everyone: Asia's best cocktail bars to hit, up and coming restaurants to sample, lesser-known beaches to visit and even a temple to drive to. All while it felt like not a lot of effort had to be made to make it happen.
+This hastily-planned Goa trip, then, was planned enough to have something for everyone: Asia's best cocktail bars to hit, up-and-coming restaurants to sample, lesser-known beaches to visit and even a temple to drive to. All while it felt like not a lot of effort had to be made to make it happen.
 
 ::blog-image{src="/images/blog/one-punch-can/4.jpg" alt="Fontainhas Architecture" align="left"}
 ::
@@ -57,7 +55,7 @@ Of all the travel I've done, I've probably never been on a trip with more densel
 ::blog-image{src="/images/blog/one-punch-can/5.jpg" alt="Amazement in Plain Sight" align="right"}
 ::
 
-Panaji typifies this excellently: on multiple trips to Goa past, most average tourists – me included – skip the "city" to drive to beach resorts south or north. The conception of Goa as a "state" with multiple "cities" in it doesn't truly arrive until you've been there a few times, driven over the new bridges and highways to go from one neighborhood to the next, and perhaps also met a friend who's moved there with their online job.
+Panaji typifies this excellently: on multiple trips to Goa past, most average tourists – me included – skip the "city" to drive to beach resorts south or north. The conception of Goa as a "state" with multiple "cities" in it doesn't truly arrive until you've been there a few times, driven over the new bridges and highways to go from one town to the next, and perhaps also met a friend who's moved there with their online job.
 
 Only then does Panaji begin to clearly appear as a city; one that may even be a place someone could have grown-up in, or moved to to live the latter part of their young adulthood. Goa, then, begins to appear as an agglomeration of regions, almost akin to the San Francisco Bay Area in California.
 
@@ -66,22 +64,22 @@ Only then does Panaji begin to clearly appear as a city; one that may even be a 
 
 Both appear as a combination of forested rolling hills on one side and a long coastline on the other; with a small coterie in the middle moving on from one venture to the next every few years. In the Silicon Valley the flavour of the day is software, the permanent trend in Goa is consumption.
 
-There seems to be little question that Goa is where so much of investment into the Indian consumption economy has happened: new "concepts" of restaurants, bars, dining and events spaces all seem to be popping up there before other big cities of the country; while I've tried many, many (in recent times over-hyped and over-priced) cocktail bars in most of India's big cities, but Bar Outrigger in Dona Paula and MTW in Fontainhas (the old Portuguese-colonist neighbourhood of Panaji) defied many tired stereotypes to be a stellar experience: partly due to its location: a few steps to a city-beach, with not many tourists around, located intimately within the narrowest of streets, so much so that they have their own tiny-cab service with drop-off and pick-up from the car park located a few in minutes away for larger cars.
+There seems to be little question that Goa is where so much of investment into the Indian consumption economy has happened: new "concepts" of restaurants, bars, dining and events spaces all seem to be popping up there before other big cities of the country; while I've tried many, many (sometimes over-hyped and over-priced) of these in most of India's big cities, but Bar Outrigger in Dona Paula defied many tired stereotypes to be a stellar experience, in part due to its location: a few steps to a city-beach, with not many tourists around, located intimately within the narrowest of streets, so much so that they have their own tiny-cab service with drop-off and pick-up from the car park located a few minutes away for larger cars.
 
 ::blog-image{src="/images/blog/one-punch-can/7.jpg" alt="Dona Paula" align="right"}
 ::
 
-Fontainhas, in particular, has many surprises: an office that turns into a cocktail bar at night, with drinks that are truly exceptional to taste (and experience). A coffee shop with sandwiches and donuts that do justice to its very lofty claim (also embedded in their WiFi password) of being the best you'll ever have.
+Fontainhas hides many surprises: it is the old Portuguese-colonist neighbourhood of the city, and therefore still where a lot of wealth resides. An office turns into a cocktail bar at night, with drinks that are truly exceptional to taste (and experience). A coffee shop with sandwiches and donuts that do justice to its very lofty claim (also embedded in their WiFi password) of being the best you'll ever have.
 
 ::blog-image{src="/images/blog/one-punch-can/8.jpg" alt="Coffee and Sandwiches" align="left"}
 ::
 
-A collection of multiple histories defines Goa: of the cities of the Konkani people prior to colonisation which preserve their agricultural lifestyle; of the neighbourhoods of the Portuguese colonists (Fontainhas being one of them), and of signs of the Indian state's eventual, almost inevitable, recapture.
+A collection of multiple histories defines Goa: of the cities of the Konkani people prior to colonisation which preserve their agricultural lifestyle; of the neighbourhoods of the Portuguese colonists and of signs of the Indian state's eventual, almost inevitable, reprisal.
 
 ::blog-image{src="/images/blog/one-punch-can/9.jpg" alt="Multiple Histories" align="right"}
 ::
 
-Is a collection of multiple histories also why the long term friend group effortlessly persists? The memory of navigating shared formative experience seems to burn itself so deep in one's psyche, that individuals who were around then – even transitively – somehow never require reintroduction in life. These characters are always around, even though communication channels are not actively maintained.
+Is a collection of multiple histories also why the long term friend group effortlessly persists? The memory of navigating shared formative experience seems to burn itself so deep in one's psyche, that individuals who were around then somehow never require reintroduction in life. These characters are always around, even though communication channels are not actively maintained.
 
 ::blog-image{src="/images/blog/one-punch-can/10.jpg" alt="Shared Navigations" align="left"}
 ::
@@ -99,7 +97,7 @@ Meals would range from expensive (but authentic) global cuisine in fancy restaur
 
 Serious questions of career, relationship, health and stability would spread themselves out in and around these topics; wrapped up in a mixture of humour and consideration, offering both relief and reassurance.
 
-For me, the subtext of the trip was also a large imminent change in life: a move abroad, a big change in work environments. From pure engineering in open-source maintenance to impure engineering in hyper-competitive big-tech online retail, shrouded by the spectre of AI over software engineering.
+For me, both were relevant, since the trip was being made in the shadow of an imminent change in life: a move abroad, to work in hyper-competitive online retail, shrouded by the spectre of AI over software engineering. My open-source work would lose active maintenance, at least as my day job.
 
 For these early characters, though, changes like these are footnotes: they have permanently profiled you as the kid who played football a certain way, or ran a certain other way, or whose house was next to that particular tree, or who had the very odd nickname that everyone in the neighbourhood used. More "meaningful" labels that we collect as we grow older are always subtext for them; thus, much of the stress that we associate with shifts in identity and questions of external perception melt away in their company. For them you are, and always will be, the nerdy kid from two blocks away.
 
@@ -110,11 +108,9 @@ The final day of the trip – a drenched drive through the winding Western ghats
 ::blog-image{src="/images/blog/one-punch-can/12.jpg" alt="Tambdisurla Kadamba Shiv Temple" align="left"}
 ::
 
-This inaccessibility seems intentional: the ancient builders seemingly felt no need to adds roads to the temple so that others may join the fold. This lack of any burning desire to share with others is, to me, a good measurement of the purity of any experience. Perhaps long-term maintenance is seeded by this purity, since it means indifference towards any particular outcome.
+This inaccessibility seems intentional: the ancient builders seemingly felt no need to adds roads to the temple so that others may join the fold. Their version of going on a trip and posting no stories, and taking barely any pictures.
 
-(Leave it to the nerd to think about the purity of a random trip to Goa).
-
-In the modern day this may translate into the number of times phones were brought out to take pictures and videos together. In that regard, I think we did well, since there were – as usual – hardly any pictures taken.
+In that regard, we followed suit as we always do: hardly any photographs to show from the whole trip.
 
 Except when we'd be prodded by the odd impulse to capture a particular scene of intense natural beauty; of a meal exquisitely laid out; of a locality with architecture beautifully preserved.
 
@@ -123,4 +119,4 @@ And finally, of a pun(ch) most elegantly made, in a bar I wager will rapidly ris
 ::blog-image{src="/images/blog/one-punch-can/13.jpg" alt="Boilermaker Punch" align="left"}
 ::
 
-Perhaps we will return to Boilermaker in two decades; if we make it, all praise for long-term maintenance will have been absolutely deserved.
+Perhaps the group will return to Boilermaker in two decades; if the both of us make it, all praise for long-term maintenance will have been absolutely deserved.
