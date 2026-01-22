@@ -55,14 +55,14 @@ Of all the travel I've done, I've probably never been on a trip with more densel
 ::blog-image{src="/images/blog/one-punch-can/5.jpg" alt="Amazement in Plain Sight" align="right"}
 ::
 
-Panaji typifies this excellently: on multiple trips to Goa past, most average tourists – me included – skip the "city" to drive to beach resorts south or north. The conception of Goa as a "state" with multiple "cities" in it doesn't truly arrive until you've been there a few times, driven over the new bridges and highways to go from one town to the next, and perhaps also met a friend who's moved there with their online job.
+Panaji typifies this excellently: on multiple trips to Goa past, most average tourists – me included – skip the "city" to drive to beach resorts south or north. The conception of Goa as a state with multiple cities in it doesn't truly arrive until you've been there a few times, driven over the new bridges and highways to go from one town to the next, and perhaps also met a friend who's moved there with their online job.
 
-Only then does Panaji begin to clearly appear as a city; one that may even be a place someone could have grown-up in, or moved to to live the latter part of their young adulthood. Goa, then, begins to appear as an agglomeration of regions, almost akin to the San Francisco Bay Area in California.
+Only then does Panaji begin to clearly appear as a city; one that may even be a place someone could have grown-up in, or moved to to live the latter part of their young adulthood. Goa, then, feels like an agglomeration of regions, almost akin to the San Francisco Bay Area in California.
 
 ::blog-image{src="/images/blog/one-punch-can/6.jpg" alt="Panaji Cityscape" align="left"}
 ::
 
-Both appear as a combination of forested rolling hills on one side and a long coastline on the other; with a small coterie in the middle moving on from one venture to the next every few years. In the Silicon Valley the flavour of the day is software, the permanent trend in Goa is consumption.
+Both provide a striking visual constrast: a combination of forested rolling hills on one side and a long coastline on the other; with a small coterie in the middle moving on from one venture to the next every few years. In the Silicon Valley the flavour of the day is software, while the permanent trend in Goa is consumption.
 
 There seems to be little question that Goa is where so much of investment into the Indian consumption economy has happened: new "concepts" of restaurants, bars, dining and events spaces all seem to be popping up there before other big cities of the country; while I've tried many, many (sometimes over-hyped and over-priced) of these in most of India's big cities, but Bar Outrigger in Dona Paula defied many tired stereotypes to be a stellar experience, in part due to its location: a few steps to a city-beach, with not many tourists around, located intimately within the narrowest of streets, so much so that they have their own tiny-cab service with drop-off and pick-up from the car park located a few minutes away for larger cars.
 
