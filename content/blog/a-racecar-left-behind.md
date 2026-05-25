@@ -26,7 +26,13 @@ The mission, became, then, to discover as many opportunities that existed inside
 
 I was a Computer Science student though, and the Formula Student team was almost exclusively mechanical or mechatronics engineers. Attempts to join in the first semester did not arise.
 
+::blog-image{src="/images/blog/a-racecar-left-behind/space-frame.jpg" alt="Space frame" caption="Sanding the metallic space-frame of the car body" align="left"}
+::
+
 6 months in, I had more of a network at campus: news filtered in that they were recruiting a software engineer to work on a project to visualise engine telemetry through real-time charts, and that they were preparing to compete at Formula Student 2017 in Italy.
+
+::blog-image{src="/images/blog/a-racecar-left-behind/3D-printer.jpg" alt="3D printer" caption="The privileged few students who had access to the campus 3D printers" align="right"}
+::
 
 I interviewed with the captain of the team that year: a final-year mechanical engineering student named Utsav Mudgal. I hope he was atleast a little bit as impressed by me as I was by him, since it seemed like he genuinely knew a lot about building cars and, despite that, had a distinct humility about him (the ring-tone of his phone at the time, coincidentally, was _Humble_ by Kendrick Lamar, something I think about to this day whenever I hear that song). Humility, counter-intuitively, was a rare characteristic at the campus.
 
@@ -36,12 +42,6 @@ I interviewed with the captain of the team that year: a final-year mechanical en
 Utsav offered a role, I accepted.
 
 What followed were nights of blood, sweat and tears: sanding the metallic frame of the car’s body and getting hospitalised in the process; all nighters at the campus workshop watching 3D printers churn out parts; building my first real-world web app with an Arduino, Angular.js and Node.js; and finally staying back in the emptied-out hostel after the semester was over in the hopes of getting the car ready in time for shipping it to “Autodromo Ricardo Paletti" in Italy.
-
-::blog-image{src="/images/blog/a-racecar-left-behind/space-frame.jpg" alt="Space frame" caption="Sanding the metallic space-frame of the car body" align="left"}
-::
-
-::blog-image{src="/images/blog/a-racecar-left-behind/3D-printer.jpg" alt="3D printer" caption="The privileged few students who had access to the campus 3D printers" align="right"}
-::
 
 All to be told a few days before we were to leave for Italy that our car was going to be delayed in being shipped. Our flights were booked, presentations ready: so we left, hoping that it’d be a minor delay.
 
@@ -108,4 +108,4 @@ Over the years I’ve seen this held true: juniors, batchmates and seniors have 
 
 By the time I stepped out, though, I’d become a believer.
 
-(Some disillusionment was in-store for my first year as an employed person in 2020, but that is a story about Shimla that I may or may not ever tell.)
+(Some disillusionment was in store for my first year as an employed person in 2020, but that is a story about Shimla that I may or may not ever tell.)
